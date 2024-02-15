@@ -49,9 +49,9 @@ namespace ManejoPresupuesto.Servicios
             using var connection = new SqlConnection(connectionString);
 
             return await connection.QueryAsync<TipoCuenta>(
-                "SELECT Id, Nombre, Orden FROM TiposCuentas WHERE  UsuarioId = @UsuarioId",
-                new {usuarioId}
-            )
+                @"SELECT Id, Nombre, Orden FROM TiposCuentas WHERE UsuarioId = @UsuarioId",
+                new { usuarioId }
+            );
         }
     }
 }
