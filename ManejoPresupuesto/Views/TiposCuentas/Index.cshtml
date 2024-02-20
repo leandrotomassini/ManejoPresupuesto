@@ -64,7 +64,7 @@
 
             async function enviarIdsAlBasckend(ids) {
                 var data = JSON.stringify(ids);
-                await fecth(urlOrdenar, {
+                await fetch(urlOrdenar, {
                     method: 'POST',
                     body: data,
                     headers: {
